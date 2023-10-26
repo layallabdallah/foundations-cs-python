@@ -1,1 +1,171 @@
+# ASSIGNEMENT 1 #
+print('')
+print('                  { FCS Cycle 49 }')
+print('')
+print('')
+print('                    Assignement I ')
+print('                    -------------')
+print('')
+print('')
+print('-----------')
+print(' Problem 1:')
+print('-----------')
+print('')
+#print("To calculate the factorial of an integer we use the recursion method because it is more efficient. ")
+print('')
 
+
+def fact(n):
+  if int(n) > 0:
+    return int(n) * fact(int(n) - 1)
+  else:
+    return 1
+
+
+x = input("enter an integer to calculates its factorial:")
+print("the factorial is:", fact(x))
+
+print('')
+print('')
+print('-----------')
+print(' Problem 2:')
+print('-----------')
+print('')
+print('')
+list=[]
+i=0 
+
+def div (x):
+    for i in range (1,int(x)+1):
+      if int(x) % int(i) == 0:
+        list.append(i)
+    return list
+    
+x = input("enter an integer to find all its divisors:")
+print("the divisors is:", div(x))
+# take into consideration negative numbers + reduce the loop  for n/2
+
+print('')
+print('')
+print('-----------')
+print(' Problem 3:')
+print('-----------')
+print('')
+print('')
+
+def reverseString (x):
+  s=''
+  for y in  x:
+     s=y+s
+  return s
+
+#
+
+x=input("enter a string to get reverse string:")
+print("the reverse is:", reverseString(x))
+
+print('')
+print('')
+print('-----------')
+print(' Problem 4:')
+print('-----------')
+print('')
+print('')
+
+def even(x):
+  print('the list of even integers is: [', end='')
+  j=0 
+  for i in x:
+    j+=1
+    try:
+      if int(i) % 2 == 0 :
+        print(i, end='')
+        if j < len(x)-2:
+          print(',',end='')
+    except ValueError:
+      pass
+
+  print(']')
+
+x=input("enter a list of integer:")
+even(x)
+
+print('')
+print('')
+print('-----------')
+print(' Problem 5:')
+print('-----------')
+print('')
+print('')
+
+def CheckPass(x):
+  k=''
+  if len(x)<8:
+    print("Your password is unvalid")
+  else:
+    u=0 #upper
+    l=0 #lower
+    d=0 #digit 
+    c=0 #caracter
+    for i in x:
+      if i.isdigit():
+        d+=1
+      elif i.islower():
+        l+=1
+      elif i.isupper():
+        u+=1
+      elif i=="$" or i=="?" or i=="&" or i=="!":
+        c+=1
+      else: 
+        pass
+  if u==0 or l==0 or d==0 or c==0:
+    k="weak password"
+  else:
+    k="Strong password"
+  return k
+
+x=input("Enter ur password please:")
+print(CheckPass(x))
+
+
+print('')
+print('')
+print('-----------')
+print(' Problem 6:')
+print('-----------')
+print('')
+print('')
+def checkIP(x):
+  k=0
+  if x.count(".")==3:
+    print("ur IP is unvalid ")
+  else:
+    y=x.split('.')
+    if len(y)==4:
+      for i in y:
+        if int(i)>255 or int(i)<0 :
+          print("your IP is unvalid")
+          break
+        if i[-1]==0 and len(i)>0:
+             print("your IP is unvalid")
+        else:
+             k+=1
+    else:
+        print("your IP id unvalid")
+
+  return k
+
+
+x=input("Enter ur IPv4 address Please:")
+z=checkIP(x)
+if z==4:
+   print("your IP is valid")
+
+
+print('')
+print('')
+print('-----------')
+print(' Problem 7:')
+print('-----------')
+print('')
+print('')
