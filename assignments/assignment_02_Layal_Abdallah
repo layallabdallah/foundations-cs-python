@@ -13,3 +13,20 @@ print("3.1. Count Tags")
 print("3.2. Count Normalized Columns")
 print("4. Exit")
 print("- - - - - - - - - - - - - - -")
+
+def countdigit(x):
+  if(x == 0 or x == ' ' or x == ''):
+      return 0
+  else:
+      return 1 + countdigit(int(int(x)/ 10)) 
+
+c= input("Enter a choice:")
+print(c, end='. ')
+
+if c == '1':
+  x=input("enter a number:")
+  if int(x)<0:
+     x=input("please enter a new positive number:")
+  else:
+   count=countdigit(x)
+   print("the number of digits:",count)
