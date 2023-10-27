@@ -33,6 +33,10 @@ def findmax(y,i=0):
      
   return findmax(y,i+1)
 
+#function to count the occurrences of the tag in the HTML code recursively
+def counttag(z,t):
+  return
+
 
 
 #to choose a choise from the given
@@ -56,3 +60,12 @@ elif c == '2':
   y=input("enter a list of number:").split()
   max=findmax(y)
   print("the maximum is:",max)
+
+
+# for 3rd part section 1
+elif c == '3.1':
+  z=input("write a valid HTML code:")
+  t=input("enter a tag:")
+  n=counttag(z,t)
+  print("the tag {0} is present {1} times", format(t,n))
+
