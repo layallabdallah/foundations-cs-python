@@ -22,8 +22,18 @@ def countdigit(x):
       return 1 + countdigit(int(int(x)/ 10))
    
 #function to find the maximum value in the list recursively
-def findmax(y):
-  return
+temp = -1
+def findmax(y,i=0):
+  global temp
+  if i >= len(y):
+    return temp
+    
+  elif int(temp) < int(y[i]):
+    temp = int(y[i])
+     
+  return findmax(y,i+1)
+
+
 
 #to choose a choise from the given
 c= input("Enter a choice:")
@@ -33,6 +43,7 @@ print(c, end='. ')
 
 # for first part
 if c == '1':
+  i=0
   x=input("enter a number:")
   if int(x)<0:
      x=input("please enter a new positive number:")
@@ -42,6 +53,6 @@ if c == '1':
 
 # for 2nd part
 elif c == '2':
-  y=input("Enter a List of number to find Max:")
+  y=input("enter a list of number:").split()
   max=findmax(y)
   print("the maximum is:",max)
