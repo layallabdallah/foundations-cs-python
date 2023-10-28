@@ -34,11 +34,23 @@ def findmax(y,i=0):
   return findmax(y,i+1)
 
 #function to count the occurrences of the tag in the HTML code recursively
-def counttag(z,t):
-  
-  return
+def count_tag_recursive(html_code, tag):
+    count = 0
+    open_tag = '<' + tag + '>'
+    close_tag = '</' + tag + '>'
 
+    if open_tag in html_code:
+       count += 1
+       html_code = html_code.replace(open_tag, '', 1)
 
+    if close_tag in html_code:
+       count += 1
+       html_code = html_code.replace(close_tag, '', 1)
+
+    if open_tag in html_code or close_tag in html_code:
+       count += count_tag_recursive(html_code, tag)
+
+    return count
 
 #to choose a choise from the given
 c= input("Enter a choice:")
@@ -65,16 +77,24 @@ elif c == '2':
 
 # for 3rd part section 1
 elif c == '3.1':
-  z=input("write a valid HTML code:")
-  t=input("enter a tag:")
-  n=counttag(z,t)
-  print("the tag {0} is present {1} times", format(t,n))
+  #html_code=input("write a valid HTML code:")
+  print("write a valid HTML code:")
+  html_code = []
+  while True:
+    try:
+        line = input()
+    except EOFError:
+        break
+    html_code.append(line)
+  tag=input("enter a tag:")
+  print('')
+  print("the tag {0} is present {1} times".format(tag, count_tag_recursive(html_code, tag)))
 
 
 # for 3rd part section 2
 elif c == '3.2':
+ continue()
 
-  
 # for 4th part
 else:
   exit()
