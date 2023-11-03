@@ -1,0 +1,17 @@
+#Enter a list of student data
+student_data = [
+ {"ID": 1,"Name": "Alice", "Age": 20, "Major": "Computer Science", "GPA": 3.7 }, 
+ {"ID": 2, "Name": "Bob", "Age": 21, "Major": "Engineering", "GPA": 3.9 },
+ {"ID": 5, "Name": "Yasmina", "Age": 19, "Major": "Medicine", "GPA": 3.5 },
+ {"ID": 7, "Name": "Ali", "Age": 19, "Major": "Psychology", "GPA": 4.9 },
+ {"ID": 9, "Name": "Yusuf", "Age": 21, "Major": "Computer Science", "GPA": 3.1}, 
+ {"ID": 11, "Name": "George", "Age": 20, "Major": "Mathematics", "GPA": 4.3 },
+ {"ID": 13, "Name": "Maria", "Age": 18, "Major": "Psychology", "GPA": 3.5 },
+ {"ID": 15, "Name": "Kazem", "Age": 20, "Major": "Mathematics", "GPA": 3.7 },
+ {"ID": 17, "Name": "Karim", "Age": 21, "Major": "Engineering", "GPA": 3.9 }
+]
+ 
+print("List of student data:")
+# Print the student data
+for j in range(len(student_data)):
+  print(student_data[j])
