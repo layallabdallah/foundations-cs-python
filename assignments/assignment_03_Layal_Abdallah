@@ -1,3 +1,12 @@
+# ASSIGNEMENT 3 #
+print('')
+print('                   { FCS Cycle 49 }')
+print('')
+print('')
+print('                    Assignement III ')
+print('                    ---------------')
+print('')
+print('')
 #Enter a list of student data
 student_data = [
  {"ID": 1,"Name": "Alice", "Age": 20, "Major": "Computer Science", "GPA": 3.7 }, 
@@ -11,7 +20,15 @@ student_data = [
  {"ID": 17, "Name": "Karim", "Age": 21, "Major": "Engineering", "GPA": 3.9 }
 ]
  
-print("List of student data:")
+print("List of student data: \n")
 # Print the student data
 for j in range(len(student_data)):
   print(student_data[j])
+
+print("")
+print("-------------------------------------------")
+print("")
+#displaying the  menu
+print(" Menu: \n 1. Get Student by ID \n 2. Get All Students \n 3. Get Students by Major \n 4. Add Student \n 5. Find Common Majors \n 6. Delete Student \n 7. Calculate Average GPA \n 8. Get Top Performers \n 9. Exit ")
+print("")
+print("-------------------------------------------")
