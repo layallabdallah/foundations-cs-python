@@ -32,3 +32,31 @@ print("")
 print(" Menu: \n 1. Get Student by ID \n 2. Get All Students \n 3. Get Students by Major \n 4. Add Student \n 5. Find Common Majors \n 6. Delete Student \n 7. Calculate Average GPA \n 8. Get Top Performers \n 9. Exit ")
 print("")
 print("-------------------------------------------")
+
+#to choose a choise from the given
+c = input("Enter a choice:")
+
+# if for each choice in given #
+
+# for first part
+if c == '1':
+  print("Please Enter ID:",end='')
+  x = input()
+  print(c, end='. ')
+  #function to get student by ID
+  def by_ID(student_data,x):
+    z=0
+    for i in range(len(student_data)):
+      j=student_data[i]['ID']
+      if j == int(x):
+        z=1
+        print(student_data[i])
+      elif i==len(student_data)-1 and z==0:
+        print("No student with ID",x,"found")
+by_ID(student_data,x)
+
+
+  
+  
+# for 2nd part
+#elif c == '2':
