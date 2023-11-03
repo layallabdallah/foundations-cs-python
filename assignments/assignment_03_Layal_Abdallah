@@ -53,10 +53,8 @@ if c == '1':
         print(student_data[i])
       elif i==len(student_data)-1 and z==0:
         print("No student with ID",x,"found")
-by_ID(student_data,x)
+  by_ID(student_data,x)
 
-
-  
-  
 # for 2nd part
-#elif c == '2':
+if c == '2':
+  print("this is choice 2")
