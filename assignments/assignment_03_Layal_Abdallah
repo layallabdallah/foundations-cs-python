@@ -57,4 +57,23 @@ if c == '1':
 
 # for 2nd part
 if c == '2':
-  print("this is choice 2")
+#This function that returns a list of all students' information.
+ def list_infos(student_data):
+  l=[]
+  for i in range(len(student_data)) :
+    k=[]
+    m=student_data[i]['ID']
+    k.append(m)
+    m=student_data[i]['Name']
+    k.append(m)
+    m=student_data[i]['Age']
+    k.append(m)
+    m=student_data[i]['Major']
+    k.append(m)
+    m=student_data[i]['GPA']
+    k.append(m)
+    print(k, end='\n')
+    l.insert(i,k)
+  print(l)
+  
+ list_infos(student_data)
