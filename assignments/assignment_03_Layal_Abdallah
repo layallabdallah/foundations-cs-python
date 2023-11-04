@@ -57,7 +57,7 @@ if c == '1':
 
 # for 2nd part
 if c == '2':
-#This function that returns a list of all students' information.
+#function that returns a list of all students' information.
  def list_infos(student_data):
   l=[]
   for i in range(len(student_data)) :
@@ -77,3 +77,25 @@ if c == '2':
   print(l)
   
  list_infos(student_data)
+
+# for 3nd part
+if c == '3':
+  print("Please Enter Major:",end='')
+  x = input()
+  print(c, end='. ')
+  l=[]
+  #function to get student by Major
+  def by_Major(student_data,x):
+    z=0
+    for i in range(len(student_data)):
+      j=student_data[i]['Major']
+      if j == x:
+        z=1
+        l.append(student_data[i]['Name'])
+        print(student_data[i])
+      elif i==len(student_data)-1 and z==0:
+        print("No student with Major",x,"found")
+    print()
+    print(l)
+  by_Major(student_data,x)
+  
