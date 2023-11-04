@@ -78,7 +78,7 @@ if c == '2':
   
  list_infos(student_data)
 
-# for 3nd part
+# for 3rd part
 if c == '3':
   print("Please Enter Major:",end='')
   x = input()
@@ -98,4 +98,25 @@ if c == '3':
     print()
     print(l)
   by_Major(student_data,x)
+
+
+# for 4th part
+if c == '4':
+  print("Please Enter ID:",end='')
+  x = input()
+  print("Please Enter Name:",end='')
+  y = input()
+  print("Please Enter Age:",end='')
+  z = input()
+  print("Please Enter Major:",end='')
+  a = input()
+  print("Please Enter GPA:",end='')
+  b = input()
+  print(c, end='. ')
+  #function to add student
+  def add_student(student_data,x,y,z,a,b):
+     student_data.append({"ID":int(x),"Name":y,"Age":int(z),"Major":a,"GPA":float(b)})
+     print("Student added successfully")
+     print(student_data)
+  add_student(student_data,x,y,z,a,b)
   
