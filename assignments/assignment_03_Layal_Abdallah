@@ -194,4 +194,10 @@ if c == '7':
    return sum/len(student_data)
  print("Average GPA:",get_average(student_data))
 
+# for 8th part
+if c == '8':
   
+
+
+#for 9th part
+exit()
