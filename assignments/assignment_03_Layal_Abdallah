@@ -159,4 +159,30 @@ if c == '5':
     
   print("Common majors are:",end='')
   print(cmn_majors(x,y))
+
+  # for 6th part
+if c == '6':
+  print("Please Enter ID:",end='')
+  x = input()
+  print()
+  print(c, end='. ')
+  #function to remove student by ID
+  def remove_byID(student_data,x):
+    z=0
+    for i in range(len(student_data)):
+      j=student_data[i]['ID']
+      if j == int(x):
+        z=1
+        print(student_data[i])
+        print()
+        copied_list=student_data.copy()
+        copied_list.remove(student_data[i])
+        print("Student removed successfully")
+        print()
+        print(copied_list)
+      elif i==len(student_data)-1 and z==0:
+        print("No student with ID",x,"found")
+
+  remove_byID(student_data,x)
+  print()
   
