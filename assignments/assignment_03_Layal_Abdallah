@@ -185,4 +185,13 @@ if c == '6':
 
   remove_byID(student_data,x)
   print()
+
+if c == '7':
+ def get_average(student_data) :
+   sum=0
+   for i in range(len(student_data)):
+     sum=sum+student_data[i]['GPA']
+   return sum/len(student_data)
+ print("Average GPA:",get_average(student_data))
+
   
