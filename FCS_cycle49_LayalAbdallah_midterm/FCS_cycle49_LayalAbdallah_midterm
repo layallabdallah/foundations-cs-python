@@ -185,6 +185,21 @@ def print_titles(tab_list):
       if "nested_tablist" in tab:
         print_titles(tab["nested_tablist"])
 print_titles(tab_list)
+
+# for fifth part #
+def open_nested(parent):
+  tab_list[int(parent)].update ({"nested_tablist" : []})
+  print("how many nested tabs do you want?", end="")
+  i=input()
+  for j in range(int(i)):
+    print("")
+    print("enter a title:", end="")
+    #validate the title
+    t=input()
+    title_valid(t)
+    print("enter a url:",end="")
+    u=input()
+    
       
 
 
