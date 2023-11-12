@@ -237,6 +237,12 @@ def save_tabs(file_path):
     print("the tabs are saved!")
     print(f"file path : {file_path}")
 
+# the eight part #
+# the eight part #
+def Import_tabs(file_path):
+    with open(file_path) as f:
+     data = json.load(f)
+
 
 
 # start with the choice #
