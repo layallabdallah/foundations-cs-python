@@ -224,6 +224,18 @@ def clear_tabs():
 import json
 import requests
 import os
+def save_tabs(file_path):
+   print("")
+   print("")
+   print("7. save tabs :")
+   print("--------------")
+   print("")
+  #using json format 
+  # I use this link as reference to json files https://www.geeksforgeeks.org/python-os-path-isfile-method/ #
+   with open(file_path, "w") as f:
+    json.dump(tab_list, f)
+    print("the tabs are saved!")
+    print(f"file path : {file_path}")
 
 
 
