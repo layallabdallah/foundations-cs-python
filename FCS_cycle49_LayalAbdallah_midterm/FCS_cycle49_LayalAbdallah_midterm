@@ -205,6 +205,19 @@ def open_nested(parent):
     print("")
     print("the updated list:")
   print(tab_list[int(parent)])
+
+#the sixth part #
+def clear_tabs():
+ print("")
+ print("")
+ print("6. Clear all Tabs :")
+ print("---------------")
+ print("")
+ #clear the tab_list and tab_count
+ tab_list.clear()
+ tab_count=0
+ print("")
+ print("all open tabs are closed!",tab_list)
     
       
 
@@ -237,6 +250,7 @@ while int(c) <= 9:
       print(f"please enter a index less than",tab_count, end=":")
       parent=input()
       open_nested(parent)
+ elif int(c) == 6: clear_tabs()
  
     
   display_menu()
