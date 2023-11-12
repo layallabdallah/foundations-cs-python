@@ -85,12 +85,36 @@ def open_tab():
   
   print("")
 
+# for second part #
+def close_tab():
+  print("")
+  print("")
+  print("1. close Tab :")
+  print("--------------")
+  print("")
+  global tab_list
+  global tab
+  global tab_count
+  index= get_index() #function line 92
+    # we should check if the index is in the range of the tab_list #
+  if int(tab_count) > 0:
+    if int(index) < int(tab_count):
+      print("")
+      print(f"tab {tab_list[int(index)]} successively closed! :")
+      tab_list.pop(int(index))
+      tab_count-=1
+      print("the list of open tabs:",tab_list)
+      print("the number of open tabs:",tab_count)
+      
+
+
 
 # start with the choice #
 c=0
 while int(c) <= 9:
   print("")
   if int(c) == 1: open_tab()
+  elif int(c) == 2: close_tab()
     
   display_menu()
   
