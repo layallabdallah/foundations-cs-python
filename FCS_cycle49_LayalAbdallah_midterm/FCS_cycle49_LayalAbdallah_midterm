@@ -23,6 +23,15 @@ def display_menu():
     print("Invalid choice")
     print("")
     display_menu()
+
+
+# start with the choice #
+c=0
+while int(c) <= 9:
+  print("")
+  if int(c) == 1: open_tab()
+    
+  display_menu()
   
 
 
