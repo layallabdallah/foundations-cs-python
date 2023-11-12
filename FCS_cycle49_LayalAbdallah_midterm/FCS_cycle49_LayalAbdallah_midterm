@@ -30,6 +30,26 @@ tab_list = [] # creating an empty list #
 tab={} #creating an empty dictionnary #
 tab_count=0 # initializing the tab count to 0 #
 
+# function to validate a title #
+def title_valid(title):
+  if title.isalpha():
+    print("Your title is valid! ")
+    return True
+  else:
+    print("Your title is invalid! Please try again.")
+    print("re-enter new title, please check if all the characters are alphabet letters (a-z):", end="")
+    return title_valid(title=input())
+  
+# function to validate a URL #
+def URL_valid(url): 
+  if url.startswith('http://') or url.startswith('https://'):
+    print("Your URL is valid! ")
+    return True
+  else:
+    print("Your URL is invalid! Please try again.")
+    print("re-enter new URL, please make sure the URL starts with (http://) or (https://) :", end="")
+    return URL_valid (url=input())
+
 # function for each given #
 # for first part #
 def open_tab():
@@ -48,6 +68,10 @@ def open_tab():
   print("Title:", end="")
   title= input()
   title_valid(title) # line 20 check if the title alphabet #
+  print("-----------")
+  print("URL:", end="")
+  URL= input()
+  URL_valid(URL) # line 31 check if the URL starts with http:// or https:// #
 
 
 # start with the choice #
