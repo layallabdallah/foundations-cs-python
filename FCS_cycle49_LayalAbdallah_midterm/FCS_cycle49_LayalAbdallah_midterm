@@ -203,6 +203,20 @@ while int(c) <= 9:
     print("---------------------")
     print("")
     print_titles(tab_list)
+  elif int(c) == 5: 
+    print("Please enter the index of the parent:", end="")
+    parent=input()
+    #check the validity of the index#
+    if int(parent) < int(tab_count):
+      print("")
+      print("the tab selected:" , tab_list[int(parent)])
+      print("")
+      open_nested(parent)
+    else:
+      print(f"please enter a index less than",tab_count, end=":")
+      parent=input()
+      open_nested(parent)
+ 
     
   display_menu()
   
