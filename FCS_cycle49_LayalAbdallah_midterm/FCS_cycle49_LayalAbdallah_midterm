@@ -232,18 +232,18 @@ def save_tabs(file_path):
    print("")
   #using json format 
   # I use this link as reference to json files https://www.geeksforgeeks.org/python-os-path-isfile-method/ #
-   with open(file_path, "w") as f:
+   with open(file_path, "w") as f: #mode write in json file
     json.dump(tab_list, f)
+    # json.dumps() function will convert a subset of Python objects into a json string.
     print("the tabs are saved!")
-    print(f"file path : {file_path}")
+    print(f"file path : {file_path}")# print the path
 
 # the eight part #
 # the eight part #
 def Import_tabs(file_path):
     with open(file_path) as f:
      data = json.load(f)
-
-
+    print(data)
 
 # start with the choice #
 c=0
@@ -278,9 +278,11 @@ while int(c) <= 9:
      if input() == 'tab_list':
       file_path = os.path.join(os.getcwd(), "tab_list.json")
      msave_tabs(file_path)
-   elif int (c) == 8: 
+  elif int (c) == 8: 
      print("Enter a file path please:", end="")
-     file_path=input()
+     input()
+     file_path = os.path.join(os.getcwd(), "tab_list.json")
+     #file_path=input()
      Import_tabs(file_path) 
 
   elif int(c)==9:
