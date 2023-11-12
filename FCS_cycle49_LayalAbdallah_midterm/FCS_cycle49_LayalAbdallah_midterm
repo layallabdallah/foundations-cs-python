@@ -223,7 +223,6 @@ def clear_tabs():
 #the seventh part #
 #import libraries#
 import json
-import requests
 import os
 def save_tabs(file_path):
    print("")
@@ -290,8 +289,6 @@ while int(c) <= 9:
      print("Thankyou! Have a nice day!")
      exit() #exit the program
 
- 
-    
   display_menu()
   
 
