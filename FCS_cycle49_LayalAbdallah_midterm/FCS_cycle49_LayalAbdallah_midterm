@@ -30,6 +30,25 @@ tab_list = [] # creating an empty list #
 tab={} #creating an empty dictionnary #
 tab_count=0 # initializing the tab count to 0 #
 
+# function for each given #
+# for first part #
+def open_tab():
+  global tab_list
+  global tab
+  global tab_count
+  print("")
+  print("")
+  print("1. Open Tab :")
+  print("-------------")
+  print("")
+  title=""
+  URL=""
+  print("To add a new tab please enter the title and the URL respectively:")
+  print("")
+  print("Title:", end="")
+  title= input()
+  title_valid(title) # line 20 check if the title alphabet #
+
 
 # start with the choice #
 c=0
