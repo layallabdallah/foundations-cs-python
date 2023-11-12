@@ -72,6 +72,18 @@ def open_tab():
   print("URL:", end="")
   URL= input()
   URL_valid(URL) # line 31 check if the URL starts with http:// or https:// #
+  tab = {
+    "title" : title,
+    "url" : URL
+  }
+  print("")
+  tab_list.append(tab)
+  tab_count+=1
+  print(f"tab {tab} successively created! :")
+  print("the list of open tabs:",tab_list)
+  print("the number of open tabs:",tab_count)
+  
+  print("")
 
 
 # start with the choice #
