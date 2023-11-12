@@ -241,9 +241,9 @@ def save_tabs(file_path):
 # the eight part #
 # the eight part #
 def Import_tabs(file_path):
-    with open(file_path) as f:
-     data = json.load(f)
-    print(data)
+    with open(file_path) as f: #open the file
+     data = json.load(f) #get the data from json file
+    print(data) #print it
 
 # start with the choice #
 c=0
@@ -279,11 +279,12 @@ while int(c) <= 9:
       file_path = os.path.join(os.getcwd(), "tab_list.json")
      msave_tabs(file_path)
   elif int (c) == 8: 
-     print("Enter a file path please:", end="")
-     input()
-     file_path = os.path.join(os.getcwd(), "tab_list.json")
-     #file_path=input()
-     Import_tabs(file_path) 
+     print("Enter a file path please:")
+     print("please enter file path in form of file.json:")
+     json_path=input() #get the path
+     file_path = os.path.join(os.getcwd(), json_path)
+     Import_tabs(file_path)
+
 
   elif int(c)==9:
      print("Thankyou! Have a nice day!")
