@@ -199,6 +199,12 @@ def open_nested(parent):
     title_valid(t)
     print("enter a url:",end="")
     u=input()
+    #validate the url
+    URL_valid(u)
+    tab_list[int(parent)]["nested_tablist"].append({"title": t , "URL": u})
+    print("")
+    print("the updated list:")
+  print(tab_list[int(parent)])
     
       
 
