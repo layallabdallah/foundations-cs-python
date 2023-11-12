@@ -144,6 +144,38 @@ def get_HTML(URL):
 # read the data from the URL and print it
    data = webUrl.read()
    print ("the HTML code for this URL:", data)
+
+# for third part #
+def switch_tab():
+  print("")
+  print("")
+  print("1. Switch Tab :")
+  print("---------------")
+  print("")
+  global tab_list
+  global tab
+  global tab_count
+  index= get_index() #function line 92
+  # we should check if the index is in the range of the tab_list #
+  if int(tab_count) > 0:
+    if int(index) < int(tab_count):
+     print("")
+     print("the tab selected:" , tab_list[int(index)])
+     URL = tab_list[int(index)]["url"]
+     get_HTML(URL)
+  # no index is provided we should get the content of the last open tab #
+    elif int(index) >= int(tab_count):
+     index = tab_count-1
+     print("")
+     print("this index is out of range, we will get the content of the last open tab !")
+     print(f"content of the tab {tab_list[int(index)]} successively produced! :")
+     print("")
+     print("the tab selected:" , tab_list[int(index)])
+     URL = tab_list[int(index)]["url"]
+     get_HTML(URL)
+  else:
+   print("")
+   print("No open tags, the list is empty!")
       
 
 
