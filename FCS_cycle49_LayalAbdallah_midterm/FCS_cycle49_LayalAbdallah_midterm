@@ -133,7 +133,8 @@ def close_tab():
     print("")
     print("No open tags, the list is empty!")
 
-#to solve this part I wrote a get HTML function, I do my research on web scraping and I refer to this link: https://www.guru99.com/accessing-internet-data-with-python.html #
+#to solve this part I wrote a get HTML function, I do my research on web scraping and I refer to this link:#
+# references https://www.guru99.com/accessing-internet-data-with-python.html #
 import urllib.request
 
 def get_HTML(URL):
@@ -231,7 +232,7 @@ def save_tabs(file_path):
    print("--------------")
    print("")
   #using json format 
-  # I use this link as reference to json files https://www.geeksforgeeks.org/python-os-path-isfile-method/ #
+  # references https://www.geeksforgeeks.org/python-os-path-isfile-method/ #
    with open(file_path, "w") as f: #mode write in json file
     json.dump(tab_list, f)
     # json.dumps() function will convert a subset of Python objects into a json string.
@@ -240,6 +241,7 @@ def save_tabs(file_path):
 
 # the eight part #
 # the eight part #
+# references https://www.tutorialspoint.com/how-to-read-json-file-in-python #
 def Import_tabs(file_path):
     with open(file_path) as f: #open the file
      data = json.load(f) #get the data from json file
