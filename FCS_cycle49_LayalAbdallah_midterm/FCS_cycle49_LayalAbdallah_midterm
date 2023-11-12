@@ -251,6 +251,11 @@ while int(c) <= 9:
       parent=input()
       open_nested(parent)
  elif int(c) == 6: clear_tabs()
+ elif int(c) == 7:
+print("please enter the name of list that you want its path:")
+    if input() == 'tab_list':
+     file_path = os.path.join(os.getcwd(), "tab_list.json")
+     save_tabs(file_path)
  elif int(c)==9:
     print("Thankyou! Have a nice day!")
     exit() #exit the program
