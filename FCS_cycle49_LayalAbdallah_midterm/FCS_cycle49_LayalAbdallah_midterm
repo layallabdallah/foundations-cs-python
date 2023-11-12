@@ -176,6 +176,15 @@ def switch_tab():
   else:
    print("")
    print("No open tags, the list is empty!")
+
+# for fourth part#
+def print_titles(tab_list):
+  for tab in tab_list:
+      print("-",end="")
+      print(tab["title"])
+      if "nested_tablist" in tab:
+        print_titles(tab["nested_tablist"])
+print_titles(tab_list)
       
 
 
@@ -187,6 +196,13 @@ while int(c) <= 9:
   if int(c) == 1: open_tab()
   elif int(c) == 2: close_tab()
   elif int(c) == 3: switch_tab()
+  elif int(c) == 4: 
+    print("")
+    print("")
+    print("4. Display All Tabs :")
+    print("---------------------")
+    print("")
+    print_titles(tab_list)
     
   display_menu()
   
