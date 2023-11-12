@@ -85,6 +85,19 @@ def open_tab():
   
   print("")
 
+#function to get and check the index #
+def get_index():
+  index=0
+  print("Please enter the index of the tab you want to work on it:", end="")
+  index=input()
+  print("")
+  while(index.isnumeric() is False):
+    print("Please enter a numeric index:",end="")
+    index=input()
+    print("")
+  print("the list of open tabs:",tab_list)
+  return index
+
 # for second part #
 def close_tab():
   print("")
@@ -95,7 +108,7 @@ def close_tab():
   global tab_list
   global tab
   global tab_count
-  index= get_index() #function line 92
+  index= get_index() #function line 88
     # we should check if the index is in the range of the tab_list #
   if int(tab_count) > 0:
     if int(index) < int(tab_count):
@@ -105,6 +118,20 @@ def close_tab():
       tab_count-=1
       print("the list of open tabs:",tab_list)
       print("the number of open tabs:",tab_count)
+ # no index is provided we should close the last openend tab #
+    elif int(index) > int(tab_count):
+      i = tab_count-1
+      print("")
+      print("this index is out of range, we will close th last open tab !")
+      print(f"tab {tab_list[i]} successively closed! :")
+      tab_list.pop(i)
+      tab_count-=1
+      print("the list of open tabs:",tab_list)
+      print("the number of open tabs:",tab_count)
+      print("")
+  else:
+    print("")
+    print("No open tags, the list is empty!")
       
 
 
