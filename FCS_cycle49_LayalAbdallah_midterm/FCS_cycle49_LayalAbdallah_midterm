@@ -251,6 +251,9 @@ while int(c) <= 9:
       parent=input()
       open_nested(parent)
  elif int(c) == 6: clear_tabs()
+ elif int(c)==9:
+    print("Thankyou! Have a nice day!")
+    exit() #exit the program
  
     
   display_menu()
