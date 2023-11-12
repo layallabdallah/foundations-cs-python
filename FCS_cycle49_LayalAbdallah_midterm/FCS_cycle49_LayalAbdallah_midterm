@@ -219,7 +219,11 @@ def clear_tabs():
  print("")
  print("all open tabs are closed!",tab_list)
     
-      
+#the seventh part #
+#import libraries#
+import json
+import requests
+import os
 
 
 
