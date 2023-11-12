@@ -67,11 +67,11 @@ def open_tab():
   print("")
   print("Title:", end="")
   title= input()
-  title_valid(title) # line 20 check if the title alphabet #
+  title_valid(title) # line 33 check if the title alphabet #
   print("-----------")
   print("URL:", end="")
   URL= input()
-  URL_valid(URL) # line 31 check if the URL starts with http:// or https:// #
+  URL_valid(URL) # line 43 check if the URL starts with http:// or https:// #
   tab = {
     "title" : title,
     "url" : URL
@@ -132,6 +132,18 @@ def close_tab():
   else:
     print("")
     print("No open tags, the list is empty!")
+
+#to solve this part I wrote a get HTML function, I do my research on web scraping and I refer to this link: https://www.guru99.com/accessing-internet-data-with-python.html #
+import urllib.request
+
+def get_HTML(URL):
+# open a connection to a URL using urllib2
+   webUrl = urllib.request.urlopen(URL)
+#get the result code and print it
+   print ("result code: " + str(webUrl.getcode()) )
+# read the data from the URL and print it
+   data = webUrl.read()
+   print ("the HTML code for this URL:", data)
       
 
 
@@ -142,6 +154,7 @@ while int(c) <= 9:
   print("")
   if int(c) == 1: open_tab()
   elif int(c) == 2: close_tab()
+  elif int(c) == 3: switch_tab()
     
   display_menu()
   
