@@ -24,6 +24,12 @@ def display_menu():
     print("")
     display_menu()
 
+tab_list = [] # creating an empty list #
+# creating list of dictionnaries in this form: #
+# tab_list = [{'title': 'title', 'url': 'url'}, ...] #
+tab={} #creating an empty dictionnary #
+tab_count=0 # initializing the tab count to 0 #
+
 
 # start with the choice #
 c=0
