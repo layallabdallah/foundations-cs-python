@@ -148,3 +148,19 @@ class Stack:
       temp.next = None
       self.size -= 1
       return temp.task
+    
+#to choose a choise from the given
+c = input("Enter a choice:")
+
+# if for each choice in given #
+
+# for first part
+if c == '1':
+  # add a new task #
+  task = Task(0,"",0,False)
+  task.set_id(input("Enter the id:"))
+  task.set_description(input("Enter the description:"))
+  task.set_priority(input("Enter the priority:"))
+  task.set_completed(input("Enter the completion status:"))
+  print("")
+  print("this task is added:",task)
