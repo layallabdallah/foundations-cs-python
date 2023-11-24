@@ -168,8 +168,17 @@ if c == '1':
   task.set_completed(input("Enter the completion status:"))
   print("")
   print("this task is added:",task)
-#for 2nd part
 
+#for 2nd part
+elif c == '2':
+  def by_id(queue,id):
+    # getting task from the queue given a task id #
+    current = queue.__head
+    while (current is not None):
+      if current.task.get_id() == id:
+        return current.task
+      current = current.next
+    return None
 
 #for 4th part
 elif c == '4':
@@ -181,6 +190,19 @@ elif c == '4':
       current = queue.head
       while (current is not None):
         print("|" + str(current.task) + "|")
+        current = current.next
+
+#for 5th part
+elif c == '5':
+#displaying only the completed tasks
+  def completed_display(queue):
+    if (queue.isEmpty()):
+      print("The queue is empty")
+    else:
+      current = queue.head
+      while (current is not None):
+        if current.task.get_completed() == True:
+          print("|" + str(current.task) + "|")
         current = current.next
 
 #for 7th part
