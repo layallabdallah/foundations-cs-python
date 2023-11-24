@@ -57,7 +57,6 @@ def open_tab():
   global tab
   global tab_count
   print("")
-  print("")
   print("1. Open Tab :")
   print("-------------")
   print("")
