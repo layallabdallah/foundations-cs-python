@@ -185,7 +185,7 @@ elif c == '4':
   def priority_display(queue):
   # displaying all tasks in order of priority
     if (queue.isEmpty()):
-    print("The queue is empty")
+      print("The queue is empty")
     else:
       current = queue.head
       while (current is not None):
@@ -204,6 +204,15 @@ elif c == '5':
         if current.task.get_completed() == True:
           print("|" + str(current.task) + "|")
         current = current.next
+
+# for 6th part
+def last_comp(stack):
+  #display the last completed task
+  if stack.isEmpty():
+    print("The stack is empty")
+  else:
+    last=pop()
+    print("The last completed task is:",last)
 
 #for 7th part
 elif c == 7:
