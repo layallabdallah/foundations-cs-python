@@ -52,3 +52,63 @@ class Node:
   def __init__(self, task : Task):
     self.task = task
     self.next = None
+
+# priority queue #
+class PriorityQueue:
+  def __init__(self):
+    self.__head = None
+    self.__size = 0
+
+  # display the queue #
+  def display(self):
+    if self.__head is None:
+      print('The queue is empty')
+    else:
+      current = self.__head
+      while (current.next is not None):
+          print(current.task,end="   ------>  ")
+          current = current.next
+
+      print(current.task)
+
+################# inserting a new node #################
+  def insert(self, task : Task):
+    
+    node = Node(task)
+  # adding to the empty one or last one #
+    if (self.__size==0):
+      self.__head = node
+      self.__size+=1
+      print("The task successively added!")
+  # new head task #
+    elif(node.task.get_priority() > self.__head.task.get_priority()):
+        node.next = self.__head
+        self.__head = node
+        self.__size+=1
+        print("The task successively added!")
+    # adding in the middle #
+    else:
+      current = self.__head
+      previous = None
+      while(current.next is not None and current.task.get_priority()>=node.task.get_priority()):
+        previous = current
+        current = current.next
+
+      node.next = current
+      previous.next = node
+      self.__size+=1
+      print("The task successively added!")
+
+################# dequeue  #################
+  def dequeue(self):
+    if self.__size == 0:
+      print("The queue is empty")
+    elif self.__size == 1:
+      self.__head = None
+      self.__size -=1
+      print("The task successively removed:",self.__head.__task)
+    else:
+      current = self.__head
+      self.__head = self.__head.next
+      self.__size -=1
+      print("The task successively removed:",current.task)
