@@ -168,7 +168,21 @@ if c == '1':
   task.set_completed(input("Enter the completion status:"))
   print("")
   print("this task is added:",task)
+#for 2nd part
 
-  #for 7th part
+
+#for 4th part
+elif c == '4':
+  def priority_display(queue):
+  # displaying all tasks in order of priority
+    if (queue.isEmpty()):
+    print("The queue is empty")
+    else:
+      current = queue.head
+      while (current is not None):
+        print("|" + str(current.task) + "|")
+        current = current.next
+
+#for 7th part
 elif c == 7:
   exit()
