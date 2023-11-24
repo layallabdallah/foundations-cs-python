@@ -45,4 +45,10 @@ class Task:
   def __str__(self):
     return f'{self.__id} , {self.__description},{self.__priority},{self.__completed}'
   
-  
+  # starting with priority queue, so we need two classes : one for node and another for the queue #
+
+# class node #
+class Node:
+  def __init__(self, task : Task):
+    self.task = task
+    self.next = None
