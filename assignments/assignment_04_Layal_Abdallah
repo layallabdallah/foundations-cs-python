@@ -7,3 +7,7 @@ print('                    Assignement IV ')
 print('                    --------------')
 print('')
 print('')
+#displaying the  menu
+print(" Menu: \n 1. Adding a new task to the task manager. \n 2. Getting a task from the queue given a task id. \n 3. Marking the highest priority task as completed and putting it in the task history. \n 4. Displaying all tasks in order of priority. \n 5. Displaying only the tasks that are not completed. \n 6. Displaying the last completed task. \n 7. Exit")
+print("")
+print("-------------------------------------------")
