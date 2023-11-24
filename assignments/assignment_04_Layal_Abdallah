@@ -39,7 +39,11 @@ class Task:
   def set_priority(self, priority : int):
     self.__priority = priority
   def set_completed(self, completed : bool):
-    self.__completed = completed
+    if completed == True or completed == False:
+      self.__completed = completed
+    else:
+      print("Error: Invalid Input, please enter only True or False")
+   
 
   # setting the string representation #
   def __str__(self):
@@ -164,3 +168,7 @@ if c == '1':
   task.set_completed(input("Enter the completion status:"))
   print("")
   print("this task is added:",task)
+
+  #for 7th part
+elif c == 7:
+  exit()
