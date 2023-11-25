@@ -229,3 +229,7 @@ elif c== '6':
 #for 7th part
 elif c == 7:
   exit()
+
+
+def main():
+  
