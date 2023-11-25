@@ -180,6 +180,17 @@ elif c == '2':
       current = current.next
     return None
 
+#for the 3rd part
+elif c == '3':
+  def put_high(queue):
+    #mark the highest priority as completed
+    while (queue is not None):
+      d=dequeue()
+      d.set_compleated(True)
+      print("this task is completed:",d)
+      push(d)
+
+
 #for 4th part
 elif c == '4':
   def priority_display(queue):
@@ -206,7 +217,8 @@ elif c == '5':
         current = current.next
 
 # for 6th part
-def last_comp(stack):
+elif c== '6':
+ def last_comp(stack):
   #display the last completed task
   if stack.isEmpty():
     print("The stack is empty")
