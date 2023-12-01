@@ -22,3 +22,7 @@ class TNode:
     self.children = []
     self.data = [] #list for name , family name and birthday date # 
                    # so for adding data we need to use append #
+
+class FamilyTree:
+  def __init__(self):
+    self.root = TNode()
