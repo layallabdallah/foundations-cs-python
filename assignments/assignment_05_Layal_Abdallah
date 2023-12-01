@@ -1,0 +1,16 @@
+# ASSIGNEMENT 5 #
+print('')
+print('                   { FCS Cycle 49 }')
+print('')
+print('')
+print('                    Assignement V ')
+print('                    --------------')
+print('')
+print('')
+print("")
+print("-------------------------------------------")
+print("")
+#displaying the  menu
+print(" Menu: \n 1. Add Family Member \n 2. Display Sorted Birthdays \n 3. Find Relationship \n 4. Visualize Family Tree \n 5. Count Same First Names \n 6. Exit")
+print("")
+print("-------------------------------------------")
