@@ -36,3 +36,18 @@ class FamilyTree:
     for child in node.children:
       found_node = self.Search(data, child)
       return found_node
+    
+  def add_child (self,cdata, parent):
+    parent_node = self.Search(parent, self.root)
+    if parent_node is None:
+      print("Parent not found")
+    else:
+      child=TNode()
+      child.data.append(cdata[0])
+      child.data.append(cdata[1])
+      child.data.append(cdata[2])
+      parent_node.children.append(child)
+      print("Child added successfully")
+      print("")
+      print(parent_node.children[-1].data, "added as child of", parent_node.data)
+      print("")
