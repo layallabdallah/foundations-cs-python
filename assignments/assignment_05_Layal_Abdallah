@@ -51,3 +51,40 @@ class FamilyTree:
       print("")
       print(parent_node.children[-1].data, "added as child of", parent_node.data)
       print("")
+
+t=FamilyTree()
+#to choose a choise from the given
+# if for each choice in given #
+while(1):
+  c = input("Enter a choice:")
+# for first part
+  if c == '1':
+    print(t.root.data)
+    for child in t.root.children:
+      print(child.data)
+      print("")
+    if not t.root.children :
+      print("The tree is initially Empty")
+      child=TNode()
+      name=input("enter the name: ")
+      child.data.append(name)
+      family_name=input("enter the family name: ")
+      child.data.append(family_name)
+      birthday_date=input("enter the birthday date: ")
+      child.data.append(birthday_date)
+      print(child.data)
+      t.root.children.append(child)
+      print("Child added successfully to the empty tree")
+      print("")
+      print("---------------------------------------")
+    else:
+      dataa=[]
+      name = input("please enter a name of the child:")
+      dataa.append(name)
+      family_name = input("please enter a family name of the child:")
+      dataa.append(family_name)
+      birthday_date = input("please enter a birthday date of the child:")
+      dataa.append(birthday_date)
+      t.add_child(dataa, parent=input("Enter the parent name to add the child: "))
+     # t.add_child(input())
+      print("---------------------------------------")
