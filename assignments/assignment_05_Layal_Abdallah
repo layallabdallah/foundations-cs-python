@@ -88,3 +88,9 @@ while(1):
       t.add_child(dataa, parent=input("Enter the parent name to add the child: "))
      # t.add_child(input())
       print("---------------------------------------")
+
+
+# for 6th part
+  if c == '6':
+     print("Thank you! Bye . :)")
+     exit()
