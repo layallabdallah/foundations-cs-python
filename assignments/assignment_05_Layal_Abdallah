@@ -14,3 +14,11 @@ print("")
 print(" Menu: \n 1. Add Family Member \n 2. Display Sorted Birthdays \n 3. Find Relationship \n 4. Visualize Family Tree \n 5. Count Same First Names \n 6. Exit")
 print("")
 print("-------------------------------------------")
+
+from typing_extensions import dataclass_transform
+
+class TNode:
+  def __init__(self):
+    self.children = []
+    self.data = [] #list for name , family name and birthday date # 
+                   # so for adding data we need to use append #
