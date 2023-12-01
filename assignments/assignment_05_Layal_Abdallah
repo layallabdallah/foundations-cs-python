@@ -26,3 +26,13 @@ class TNode:
 class FamilyTree:
   def __init__(self):
     self.root = TNode()
+
+  def Search(self, data, node):
+    if self.root is None:
+      return None
+    if node.data and node.data[0] == data:
+      print(node.data, "found")
+      return node
+    for child in node.children:
+      found_node = self.Search(data, child)
+      return found_node
